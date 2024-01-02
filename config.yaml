@@ -1,0 +1,11 @@
+name: "TeslaMateAgile"
+description: "Integration to automatically fill in prices for charge data captured by TeslaMate for smart energy providers"
+version: "1.12.1"
+slug: "teslamate_agile"
+url: "https://github.com/MattJeanes/TeslaMateAgile"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
