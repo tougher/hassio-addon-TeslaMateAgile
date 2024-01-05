@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::log.info "Starting TeslaMateAgile"
+
+export DATABASE_USER=$(bashio::config 'database_user')
+export DATABASE_PASS=$(bashio::config 'database_pass')
+export DATABASE_NAME=$(bashio::config 'database_name')
+export DATABASE_HOST=$(bashio::config 'database_host')
+export DATABASE_PORT=$(bashio::config 'database_port')
+
+args=$(bashio::config 'args')
+
+bashio::log.debug "ARGS: $args"
+
+while read -r line; do
+    line=$(sed '/^[[:blank:]]*#/d;s/#.*//' <<< "$line") # remove comments
+    line=$(tr -d ' ' <<< "$line") # trim whitespace
+    name=${line%=*}
+    value=${line##*=}
+
+    export "$name"="$value"
+    bashio::log.info "'$name' SET TO '$value'"
+done <<< "$args"
+
+exec dotnet /app/TeslaMateAgile.dll

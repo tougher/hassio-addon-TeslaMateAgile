@@ -4,8 +4,33 @@ version: "1.12.1"
 slug: "teslamate_agile"
 url: "https://github.com/MattJeanes/TeslaMateAgile"
 init: false
+startup: application
 arch:
   - aarch64
   - amd64
   - armhf
   - armv7
+options:
+  database_user: "username"
+  database_pass: "password"
+  database_name: "databasename"
+  database_host: "29b65938-postgres"
+  database_port: 5432
+  args:
+    - TeslaMate__UpdateIntervalSeconds=3600
+    - TeslaMate__GeofenceId=1
+    - TeslaMate__EnergyProvider=FixedPrice
+    - FixedPrice__TimeZone=Europe/London
+    - FixedPrice__Prices__0=08:00-13:00=0.1559
+    - FixedPrice__Prices__1=13:00-20:00=0.05
+    - FixedPrice__Prices__2=20:00-03:30=0.04
+    - FixedPrice__Prices__3=03:30-06:00=0.035
+    - FixedPrice__Prices__4=06:00-08:00=0.02
+schema:
+  database_user: str
+  database_pass: password
+  database_name: str
+  database_host: str
+  database_port: int
+  args:
+    - str

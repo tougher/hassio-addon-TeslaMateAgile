@@ -78,5 +78,10 @@ RUN \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/src/*
 
-WORKDIR /app
-ENTRYPOINT ["dotnet", "TeslaMateAgile.dll"]
+# Copy root filesystem
+COPY rootfs /
+
+RUN chmod a+x /etc/services.d/teslamate_agile/*
+
+# S6-Overlay
+ENTRYPOINT ["/init"]
