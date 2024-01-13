@@ -13,8 +13,6 @@ args=$(bashio::config 'args')
 bashio::log.debug "ARGS: $args"
 
 while read -r line; do
-    line=$(sed '/^[[:blank:]]*#/d;s/#.*//' <<< "$line") # remove comments
-    line=$(tr -d ' ' <<< "$line") # trim whitespace
     name=${line%=*}
     value=${line##*=}
 
