@@ -33,6 +33,8 @@ ARG \
 WORKDIR /usr/src
 ARG BUILD_ARCH
 
+USER root
+
 RUN \
     set -x \
     && apt-get update && apt-get install -y --no-install-recommends \
@@ -82,6 +84,8 @@ RUN \
 COPY rootfs /
 
 RUN chmod a+x /etc/services.d/teslamate_agile/*
+
+USER app
 
 # S6-Overlay
 ENTRYPOINT ["/init"]
