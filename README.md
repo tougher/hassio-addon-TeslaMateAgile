@@ -2,7 +2,7 @@
 
 This addon is wrapping [TeslaMateAgile](https://github.com/MattJeanes/TeslaMateAgile) done by Matt Jeanes.
 
-Current TeslaMateAgile version: [v1.13.0](https://github.com/MattJeanes/TeslaMateAgile/releases/tag/v1.13.0)
+Current TeslaMateAgile version: [v1.16.0](https://github.com/MattJeanes/TeslaMateAgile/releases/tag/v1.16.0)
 
 ## Default configuration
 
