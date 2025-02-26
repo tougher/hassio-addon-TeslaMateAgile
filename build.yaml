@@ -1,5 +1,5 @@
 image: ghcr.io/home-assistant/{arch}-base-debian
-build_from: "mattjeanes/teslamateagile:v1.16.0"
+build_from: "mattjeanes/teslamateagile:v1.17.0"
 cosign:
   identity: https://github.com/home-assistant/docker-base/.*
 args:

@@ -1,6 +1,6 @@
 name: "TeslaMateAgile"
 description: "Integration to automatically fill in prices for charge data captured by TeslaMate for smart energy providers"
-version: "1.1.0"
+version: "1.17.0"
 slug: "teslamate_agile"
 url: "https://github.com/tougher/hassio-addon-TeslaMateAgile"
 init: false
