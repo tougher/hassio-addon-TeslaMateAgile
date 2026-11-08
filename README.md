@@ -1,8 +1,8 @@
 # TeslaMateAgile addon for Home Assistant
 
-This addon is wrapping [TeslaMateAgile](https://github.com/MattJeanes/TeslaMateAgile) done by Matt Jeanes.
+This addon is wrapping [TeslaMateAgile](https://github.com/AmyJeanes/TeslaMateAgile) done by Matt Jeanes, now maintained by Amy Jeanes.
 
-Current TeslaMateAgile version: [v1.23.0](https://github.com/MattJeanes/TeslaMateAgile/releases/tag/v1.23.0)
+Current TeslaMateAgile version: [v1.23.0](https://github.com/AmyJeanes/TeslaMateAgile/releases/tag/v1.23.0)
 
 ## Default configuration
 
@@ -24,4 +24,4 @@ args:
   - FixedPrice__Prices__4=06:00-08:00=0.02
 ```
 
-> Note: You should edit the configuration in Home Assistant in YAML mode. This way you can copy/paste directly from https://github.com/MattJeanes/TeslaMateAgile
+> Note: You should edit the configuration in Home Assistant in YAML mode. This way you can copy/paste directly from https://github.com/AmyJeanes/TeslaMateAgile
